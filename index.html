@@ -1,134 +1,209 @@
-Olawale Ajani
-About
-Case Studies
-Product Judgment
-Skills
-Contact
-Product Design • UX Evaluation • AI Assessment
-Research-driven product judgment for better user experiences.
-I evaluate digital experiences, AI outputs, user journeys, and service workflows to identify friction, improve clarity, and support better product decisions.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Olawale Ajani | Product Design & UX Evaluation Portfolio</title>
+  <meta name="description" content="Portfolio of Olawale Ajani: Product Design, UX Evaluation, AI Assessment, User Journey Analysis, Service Design, and Product Judgment." />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --card-2: #1f2937;
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --accent: #38bdf8;
+      --accent-2: #a78bfa;
+      --line: rgba(255,255,255,0.12);
+      --max: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top left, rgba(56,189,248,.22), transparent 30%), radial-gradient(circle at top right, rgba(167,139,250,.20), transparent 30%), var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      backdrop-filter: blur(12px);
+      background: rgba(15, 23, 42, 0.82);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner, section, footer { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+    .nav-inner { height: 72px; display: flex; align-items: center; justify-content: space-between; }
+    .brand { font-weight: 800; letter-spacing: .2px; }
+    .nav-links { display: flex; gap: 18px; font-size: 14px; color: var(--muted); }
+    .nav-links a:hover { color: var(--text); }
+    .hero { padding: 88px 24px 64px; }
+    .hero-grid { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1.4fr .8fr; gap: 36px; align-items: center; }
+    .eyebrow { color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: .12em; font-size: 13px; }
+    h1 { font-size: clamp(42px, 7vw, 76px); line-height: .95; margin: 16px 0 20px; }
+    h2 { font-size: 34px; margin: 0 0 14px; }
+    h3 { font-size: 23px; margin: 0 0 10px; }
+    p { color: var(--muted); margin: 0 0 16px; }
+    .lead { font-size: 20px; max-width: 760px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .btn { display: inline-flex; padding: 12px 18px; border-radius: 999px; border: 1px solid var(--line); background: rgba(255,255,255,.06); font-weight: 700; }
+    .btn.primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #06111f; border: none; }
+    .hero-card { padding: 26px; background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03)); border: 1px solid var(--line); border-radius: 28px; box-shadow: 0 30px 80px rgba(0,0,0,.25); }
+    .metric { padding: 16px 0; border-bottom: 1px solid var(--line); }
+    .metric:last-child { border-bottom: 0; }
+    .metric strong { display: block; font-size: 28px; color: var(--text); }
+    section { padding-top: 74px; padding-bottom: 24px; }
+    .section-head { max-width: 780px; margin-bottom: 26px; }
+    .grid { display: grid; gap: 18px; }
+    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .card { background: rgba(17,24,39,.78); border: 1px solid var(--line); border-radius: 24px; padding: 24px; }
+    .card.highlight { background: linear-gradient(135deg, rgba(56,189,248,.12), rgba(167,139,250,.12)); }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .tag { font-size: 13px; color: #dbeafe; border: 1px solid rgba(148,163,184,.35); padding: 6px 10px; border-radius: 999px; background: rgba(255,255,255,.04); }
+    ul { margin: 12px 0 0; padding-left: 20px; color: var(--muted); }
+    li { margin-bottom: 8px; }
+    .case { margin-bottom: 22px; }
+    .case-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; margin-bottom: 14px; }
+    .case-num { color: var(--accent); font-weight: 800; }
+    .framework { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+    .frame { padding: 14px; border-radius: 18px; background: rgba(255,255,255,.05); border: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+    .judgment { border-left: 4px solid var(--accent); }
+    footer { padding-top: 64px; padding-bottom: 46px; color: var(--muted); }
+    .contact-box { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+    @media (max-width: 860px) {
+      .hero-grid, .grid.two, .grid.three { grid-template-columns: 1fr; }
+      .framework { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+      .hero { padding-top: 56px; }
+    }
+    @media (max-width: 520px) { .framework { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a class="brand" href="#top">Olawale Ajani</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#case-studies">Case Studies</a>
+        <a href="#judgment">Product Judgment</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-View Case Studies
-Contact Me
-UX Evaluation
-Usability review, journey feedback, and product critique
-AI Assessment
-Response quality, usefulness, reasoning, and safety review
-Service Design
-Complex user journeys across public-sector and support services
-About
-Product Design & UX Evaluation Specialist
-I bring a multidisciplinary background in business operations, research, AI evaluation, financial services, public administration, and humanitarian service delivery. My strength is not only visual design, but understanding user needs, assessing product experiences, and turning complex information into practical recommendations.
+  <header class="hero" id="top">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Product Design • UX Evaluation • AI Assessment</div>
+        <h1>Research-driven product judgment for better user experiences.</h1>
+        <p class="lead">I evaluate digital experiences, AI outputs, user journeys, and service workflows to identify friction, improve clarity, and support better product decisions.</p>
+        <div class="actions">
+          <a class="btn primary" href="#case-studies">View Case Studies</a>
+          <a class="btn" href="#contact">Contact Me</a>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <div class="metric"><strong>UX Evaluation</strong><span>Usability review, journey feedback, and product critique</span></div>
+        <div class="metric"><strong>AI Assessment</strong><span>Response quality, usefulness, reasoning, and safety review</span></div>
+        <div class="metric"><strong>Service Design</strong><span>Complex user journeys across public-sector and support services</span></div>
+      </aside>
+    </div>
+  </header>
 
-User-Centred Analysis
-I review how users move through products, services, and information flows, then identify points of confusion, delay, or cognitive load.
+  <section id="about">
+    <div class="section-head">
+      <div class="eyebrow">About</div>
+      <h2>Product Design & UX Evaluation Specialist</h2>
+      <p>I bring a multidisciplinary background in business operations, research, AI evaluation, financial services, public administration, and humanitarian service delivery. My strength is not only visual design, but understanding user needs, assessing product experiences, and turning complex information into practical recommendations.</p>
+    </div>
+    <div class="grid three">
+      <div class="card"><h3>User-Centred Analysis</h3><p>I review how users move through products, services, and information flows, then identify points of confusion, delay, or cognitive load.</p></div>
+      <div class="card"><h3>AI Product Evaluation</h3><p>I assess AI-generated outputs for accuracy, clarity, usefulness, reasoning quality, and alignment with user intent.</p></div>
+      <div class="card"><h3>Research Synthesis</h3><p>I convert interviews, feedback, operational data, and stakeholder input into structured findings and recommendations.</p></div>
+    </div>
+  </section>
 
-AI Product Evaluation
-I assess AI-generated outputs for accuracy, clarity, usefulness, reasoning quality, and alignment with user intent.
+  <section id="case-studies">
+    <div class="section-head">
+      <div class="eyebrow">Selected Work</div>
+      <h2>Case Studies</h2>
+      <p>These examples show how I apply UX thinking, service analysis, product critique, and research-driven judgment across AI, banking, public-sector, and support-service contexts.</p>
+    </div>
 
-Research Synthesis
-I convert interviews, feedback, operational data, and stakeholder input into structured findings and recommendations.
+    <article class="card case highlight">
+      <div class="case-top"><div><span class="case-num">Case Study 01</span><h3>AI Product Evaluation & User Experience Assessment</h3></div></div>
+      <p><strong>Challenge:</strong> AI products must deliver responses that are accurate, helpful, clear, safe, and aligned with user expectations.</p>
+      <div class="grid two">
+        <div><h3>Approach</h3><ul><li>Reviewed AI-generated responses against user intent.</li><li>Evaluated clarity, usefulness, reasoning, and completeness.</li><li>Identified usability gaps where responses were vague, overcomplicated, or not actionable.</li><li>Provided structured feedback to improve the product experience.</li></ul></div>
+        <div><h3>Outcome</h3><ul><li>Created consistent assessment logic for product-quality decisions.</li><li>Improved feedback quality through clear evaluation criteria.</li><li>Demonstrated judgment across business, research, compliance, and customer-experience scenarios.</li></ul></div>
+      </div>
+      <div class="framework"><div class="frame">Accuracy</div><div class="frame">Relevance</div><div class="frame">Clarity</div><div class="frame">Helpfulness</div><div class="frame">Safety</div></div>
+      <div class="tag-row"><span class="tag">AI Evaluation</span><span class="tag">UX Assessment</span><span class="tag">Product Judgment</span><span class="tag">Response Quality</span></div>
+    </article>
 
-Selected Work
-Case Studies
-These examples show how I apply UX thinking, service analysis, product critique, and research-driven judgment across AI, banking, public-sector, and support-service contexts.
+    <article class="card case">
+      <div class="case-top"><div><span class="case-num">Case Study 02</span><h3>Banking Customer Journey Review</h3></div></div>
+      <p><strong>Challenge:</strong> Customers often need support understanding financial products, onboarding steps, and service options.</p>
+      <div class="grid two">
+        <div><h3>Research Activities</h3><ul><li>Analysed customer needs and pain points.</li><li>Reviewed product explanation and onboarding friction.</li><li>Observed where customers required additional guidance.</li><li>Mapped service interactions from enquiry to recommendation.</li></ul></div>
+        <div><h3>Recommendations</h3><ul><li>Simplify product explanations using plain language.</li><li>Create clearer onboarding steps and decision support.</li><li>Improve responsiveness and issue-resolution pathways.</li><li>Personalise recommendations around customer goals.</li></ul></div>
+      </div>
+      <div class="tag-row"><span class="tag">Customer Experience</span><span class="tag">Journey Mapping</span><span class="tag">Financial Services</span><span class="tag">User Needs</span></div>
+    </article>
 
-Case Study 01
-AI Product Evaluation & User Experience Assessment
-Challenge: AI products must deliver responses that are accurate, helpful, clear, safe, and aligned with user expectations.
+    <article class="card case">
+      <div class="case-top"><div><span class="case-num">Case Study 03</span><h3>Service Design for Vulnerable Users</h3></div></div>
+      <p><strong>Challenge:</strong> Users navigating complex support services often deal with multiple agencies, documentation demands, safeguarding needs, and stressful circumstances.</p>
+      <div class="grid two">
+        <div><h3>Approach</h3><ul><li>Conducted needs assessments and risk reviews.</li><li>Analysed service touchpoints and stakeholder handoffs.</li><li>Prepared structured reports and case documentation.</li><li>Identified opportunities to reduce confusion and improve service accessibility.</li></ul></div>
+        <div><h3>UX Principles Applied</h3><ul><li>Clarity: make next steps easier to understand.</li><li>Trust: provide consistent communication.</li><li>Accessibility: reduce administrative burden.</li><li>Coordination: improve handoffs between stakeholders.</li></ul></div>
+      </div>
+      <div class="tag-row"><span class="tag">Service Design</span><span class="tag">User Journey</span><span class="tag">Public Sector</span><span class="tag">Stakeholder Coordination</span></div>
+    </article>
+  </section>
 
-Approach
-Reviewed AI-generated responses against user intent.
-Evaluated clarity, usefulness, reasoning, and completeness.
-Identified usability gaps where responses were vague, overcomplicated, or not actionable.
-Provided structured feedback to improve the product experience.
-Outcome
-Created consistent assessment logic for product-quality decisions.
-Improved feedback quality through clear evaluation criteria.
-Demonstrated judgment across business, research, compliance, and customer-experience scenarios.
-Accuracy
-Relevance
-Clarity
-Helpfulness
-Safety
-AI Evaluation
-UX Assessment
-Product Judgment
-Response Quality
-Case Study 02
-Banking Customer Journey Review
-Challenge: Customers often need support understanding financial products, onboarding steps, and service options.
+  <section id="judgment">
+    <div class="section-head">
+      <div class="eyebrow">Product Judgment</div>
+      <h2>How I Evaluate Product Quality</h2>
+      <p>For product design and AI evaluation tasks, I use structured judgment: identify the user goal, compare options, assess friction, and recommend the experience that best supports the user.</p>
+    </div>
+    <div class="grid two">
+      <div class="card judgment"><h3>Example: Onboarding Flow</h3><p><strong>Question:</strong> Which onboarding flow creates less friction?</p><ul><li>Option A requires many fields before the user sees value.</li><li>Option B asks only for essential information first.</li><li>Recommendation: Option B, because it reduces cognitive load and helps users reach the core experience faster.</li></ul></div>
+      <div class="card judgment"><h3>Example: AI Response Quality</h3><p><strong>Question:</strong> Which response better serves the user?</p><ul><li>Response A is technically correct but vague.</li><li>Response B is accurate, structured, and actionable.</li><li>Recommendation: Response B, because it better matches user intent and reduces the need for follow-up clarification.</li></ul></div>
+    </div>
+  </section>
 
-Research Activities
-Analysed customer needs and pain points.
-Reviewed product explanation and onboarding friction.
-Observed where customers required additional guidance.
-Mapped service interactions from enquiry to recommendation.
-Recommendations
-Simplify product explanations using plain language.
-Create clearer onboarding steps and decision support.
-Improve responsiveness and issue-resolution pathways.
-Personalise recommendations around customer goals.
-Customer Experience
-Journey Mapping
-Financial Services
-User Needs
-Case Study 03
-Service Design for Vulnerable Users
-Challenge: Users navigating complex support services often deal with multiple agencies, documentation demands, safeguarding needs, and stressful circumstances.
+  <section id="skills">
+    <div class="section-head">
+      <div class="eyebrow">Skills & Methods</div>
+      <h2>Tools, Methods, and Strengths</h2>
+    </div>
+    <div class="card">
+      <div class="tag-row">
+        <span class="tag">UX Research</span><span class="tag">User Journey Mapping</span><span class="tag">Usability Assessment</span><span class="tag">Product Evaluation</span><span class="tag">AI Evaluation</span><span class="tag">Service Design</span><span class="tag">Customer Experience</span><span class="tag">Research Synthesis</span><span class="tag">Business Analysis</span><span class="tag">Stakeholder Management</span><span class="tag">Process Improvement</span><span class="tag">Report Writing</span><span class="tag">Microsoft Excel</span><span class="tag">PowerPoint</span><span class="tag">Word</span><span class="tag">Google Workspace</span>
+      </div>
+    </div>
+  </section>
 
-Approach
-Conducted needs assessments and risk reviews.
-Analysed service touchpoints and stakeholder handoffs.
-Prepared structured reports and case documentation.
-Identified opportunities to reduce confusion and improve service accessibility.
-UX Principles Applied
-Clarity: make next steps easier to understand.
-Trust: provide consistent communication.
-Accessibility: reduce administrative burden.
-Coordination: improve handoffs between stakeholders.
-Service Design
-User Journey
-Public Sector
-Stakeholder Coordination
-Product Judgment
-How I Evaluate Product Quality
-For product design and AI evaluation tasks, I use structured judgment: identify the user goal, compare options, assess friction, and recommend the experience that best supports the user.
+  <section id="contact">
+    <div class="section-head">
+      <div class="eyebrow">Contact</div>
+      <h2>Let's connect</h2>
+      <p>I am available for UX evaluation, AI product assessment, product research, user journey feedback, service design analysis, and research-focused product judgment projects.</p>
+      <div class="contact-box">
+        <a class="btn primary" href="mailto:elawjani@gmail.com">elawjani@gmail.com</a>
+        <a class="btn" href="https://github.com/Elawjani/olawale.ajani" target="_blank" rel="noreferrer">GitHub Repository</a>
+      </div>
+    </div>
+  </section>
 
-Example: Onboarding Flow
-Question: Which onboarding flow creates less friction?
-
-Option A requires many fields before the user sees value.
-Option B asks only for essential information first.
-Recommendation: Option B, because it reduces cognitive load and helps users reach the core experience faster.
-Example: AI Response Quality
-Question: Which response better serves the user?
-
-Response A is technically correct but vague.
-Response B is accurate, structured, and actionable.
-Recommendation: Response B, because it better matches user intent and reduces the need for follow-up clarification.
-Skills & Methods
-Tools, Methods, and Strengths
-UX Research
-User Journey Mapping
-Usability Assessment
-Product Evaluation
-AI Evaluation
-Service Design
-Customer Experience
-Research Synthesis
-Business Analysis
-Stakeholder Management
-Process Improvement
-Report Writing
-Microsoft Excel
-PowerPoint
-Word
-Google Workspace
-Contact
-Let's connect
-I am available for UX evaluation, AI product assessment, product research, user journey feedback, service design analysis, and research-focused product judgment projects.
-
-elawjani@gmail.com
-GitHub Repository
-© 2026 Olawale Ajani. Product Design, UX Evaluation, AI Assessment, and Service Design Portfolio.
+  <footer>
+    <p>© 2026 Olawale Ajani. Product Design, UX Evaluation, AI Assessment, and Service Design Portfolio.</p>
+  </footer>
+</body>
+</html>
