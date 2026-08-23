@@ -40,6 +40,9 @@ This portfolio is built around three complementary areas of expertise:
 
 ## Selected portfolio work
 
+### Community Support Navigator — Independent Product Concept
+A fully public end-to-end case study showing problem framing, information architecture, user-flow design, low-fidelity wireframing, polished UI, accessibility decisions and a defined usability-evaluation plan. The concept is self-directed and contains no client data or claimed production metrics.
+
 ### Product Design — Orizon Design
 An NDA-safe representation of my product-design workflow, covering discovery, research synthesis, user flows, wireframing, prototyping, usability evaluation and iterative design decisions.
 
@@ -75,7 +78,7 @@ I also contribute to AI evaluation work, including structured rubric assessment,
 
 ## Confidentiality and evidence
 
-Some professional design work cannot be published in its original form because of confidentiality and NDA considerations. Where this applies, the portfolio clearly labels visuals as representative reconstructions and focuses on the design process, reasoning and methods used. No confidential client information or fabricated performance outcomes are presented as public evidence.
+The portfolio separates independent concept work from professional reconstructions. The Community Support Navigator is clearly labelled as self-directed public work. Where professional design artifacts cannot be published because of confidentiality or NDA considerations, visuals are labelled as representative reconstructions and the focus remains on the real process, reasoning and methods used. No confidential client information or fabricated performance outcomes are presented as public evidence.
 
 ## Contact
 
