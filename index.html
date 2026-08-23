@@ -1,209 +1,117 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Olawale Ajani | Product Design & UX Evaluation Portfolio</title>
-  <meta name="description" content="Portfolio of Olawale Ajani: Product Design, UX Evaluation, AI Assessment, User Journey Analysis, Service Design, and Product Judgment." />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Portfolio of Olawale Ajani, a Senior UX/UI Product Designer with domain expertise in nonprofit/community engagement and government/public administration." />
+  <meta name="theme-color" content="#111318" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Olawale Ajani | Senior UX/UI Product Designer" />
+  <meta property="og:description" content="Research-led product design for complex digital and service experiences." />
+  <title>Olawale Ajani | Senior UX/UI Product Designer</title>
   <style>
-    :root {
-      --bg: #0f172a;
-      --card: #111827;
-      --card-2: #1f2937;
-      --text: #f8fafc;
-      --muted: #cbd5e1;
-      --accent: #38bdf8;
-      --accent-2: #a78bfa;
-      --line: rgba(255,255,255,0.12);
-      --max: 1120px;
+    :root{
+      --ink:#111318;--ink2:#20232b;--muted:#646a76;--paper:#f5f4ef;--card:#fff;--line:#deddd7;
+      --violet:#6558e8;--violet2:#4b3fd2;--cyan:#19a7bd;--lime:#d7f36a;--soft:#eceaf9;
+      --shadow:0 28px 80px rgba(27,31,45,.10);--max:1180px;--r:28px;
     }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top left, rgba(56,189,248,.22), transparent 30%), radial-gradient(circle at top right, rgba(167,139,250,.20), transparent 30%), var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    a { color: inherit; text-decoration: none; }
-    nav {
-      position: sticky; top: 0; z-index: 10;
-      backdrop-filter: blur(12px);
-      background: rgba(15, 23, 42, 0.82);
-      border-bottom: 1px solid var(--line);
-    }
-    .nav-inner, section, footer { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
-    .nav-inner { height: 72px; display: flex; align-items: center; justify-content: space-between; }
-    .brand { font-weight: 800; letter-spacing: .2px; }
-    .nav-links { display: flex; gap: 18px; font-size: 14px; color: var(--muted); }
-    .nav-links a:hover { color: var(--text); }
-    .hero { padding: 88px 24px 64px; }
-    .hero-grid { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1.4fr .8fr; gap: 36px; align-items: center; }
-    .eyebrow { color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: .12em; font-size: 13px; }
-    h1 { font-size: clamp(42px, 7vw, 76px); line-height: .95; margin: 16px 0 20px; }
-    h2 { font-size: 34px; margin: 0 0 14px; }
-    h3 { font-size: 23px; margin: 0 0 10px; }
-    p { color: var(--muted); margin: 0 0 16px; }
-    .lead { font-size: 20px; max-width: 760px; }
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-    .btn { display: inline-flex; padding: 12px 18px; border-radius: 999px; border: 1px solid var(--line); background: rgba(255,255,255,.06); font-weight: 700; }
-    .btn.primary { background: linear-gradient(135deg, var(--accent), var(--accent-2)); color: #06111f; border: none; }
-    .hero-card { padding: 26px; background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03)); border: 1px solid var(--line); border-radius: 28px; box-shadow: 0 30px 80px rgba(0,0,0,.25); }
-    .metric { padding: 16px 0; border-bottom: 1px solid var(--line); }
-    .metric:last-child { border-bottom: 0; }
-    .metric strong { display: block; font-size: 28px; color: var(--text); }
-    section { padding-top: 74px; padding-bottom: 24px; }
-    .section-head { max-width: 780px; margin-bottom: 26px; }
-    .grid { display: grid; gap: 18px; }
-    .grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .card { background: rgba(17,24,39,.78); border: 1px solid var(--line); border-radius: 24px; padding: 24px; }
-    .card.highlight { background: linear-gradient(135deg, rgba(56,189,248,.12), rgba(167,139,250,.12)); }
-    .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
-    .tag { font-size: 13px; color: #dbeafe; border: 1px solid rgba(148,163,184,.35); padding: 6px 10px; border-radius: 999px; background: rgba(255,255,255,.04); }
-    ul { margin: 12px 0 0; padding-left: 20px; color: var(--muted); }
-    li { margin-bottom: 8px; }
-    .case { margin-bottom: 22px; }
-    .case-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; margin-bottom: 14px; }
-    .case-num { color: var(--accent); font-weight: 800; }
-    .framework { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
-    .frame { padding: 14px; border-radius: 18px; background: rgba(255,255,255,.05); border: 1px solid var(--line); font-size: 14px; color: var(--muted); }
-    .judgment { border-left: 4px solid var(--accent); }
-    footer { padding-top: 64px; padding-bottom: 46px; color: var(--muted); }
-    .contact-box { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
-    @media (max-width: 860px) {
-      .hero-grid, .grid.two, .grid.three { grid-template-columns: 1fr; }
-      .framework { grid-template-columns: 1fr 1fr; }
-      .nav-links { display: none; }
-      .hero { padding-top: 56px; }
-    }
-    @media (max-width: 520px) { .framework { grid-template-columns: 1fr; } }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none} img,svg{max-width:100%;display:block} button,a{outline-offset:4px}
+    .wrap{width:min(calc(100% - 40px),var(--max));margin:auto}.skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:16px;z-index:200;background:#fff;padding:10px 14px;border-radius:10px}
+    nav{position:sticky;top:0;z-index:50;background:rgba(245,244,239,.91);backdrop-filter:blur(16px);border-bottom:1px solid rgba(222,221,215,.8)}
+    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:950;letter-spacing:-.04em;font-size:20px}.brand em{font-style:normal;color:var(--violet)}
+    .navlinks{display:flex;align-items:center;gap:22px;color:var(--muted);font-size:14px;font-weight:750}.navlinks a:hover{color:var(--ink)}
+    .nav-cv{background:var(--ink);color:#fff!important;padding:10px 15px;border-radius:999px}.nav-cv:hover{background:var(--violet)}
+    .hero{padding:90px 0 74px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:68px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:900;color:var(--violet)}.eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 5px rgba(25,167,189,.12)}
+    h1{font-size:clamp(48px,7.2vw,84px);line-height:.97;letter-spacing:-.06em;margin:18px 0 24px;max-width:830px}h2{font-size:clamp(34px,5vw,56px);line-height:1.02;letter-spacing:-.047em;margin:8px 0 16px}h3{font-size:24px;line-height:1.17;letter-spacing:-.03em;margin:0 0 10px}h4{font-size:13px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin:0 0 9px}
+    p{margin:0 0 16px;color:var(--muted)}.lead{font-size:20px;max-width:760px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:13px 18px;background:#fff;font-size:14px;font-weight:850}.btn.primary{background:var(--ink);color:#fff;border-color:var(--ink)}.btn.primary:hover{background:var(--violet)}.btn:hover{transform:translateY(-1px)}
+    .pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.pill{padding:7px 10px;border-radius:999px;background:#ebeaf0;color:#4e5360;font-size:12px;font-weight:800}
+    .hero-art{position:relative;min-height:510px}.hero-art:before{content:"";position:absolute;width:430px;height:430px;border-radius:50%;right:-120px;top:-120px;background:radial-gradient(circle at 35% 35%,rgba(101,88,232,.35),rgba(25,167,189,.12) 52%,transparent 72%)}
+    .studio{position:relative;margin-top:22px;background:#fff;border:1px solid var(--line);border-radius:30px;box-shadow:var(--shadow);overflow:hidden;transform:rotate(1deg)}.chrome{height:48px;background:#fafafd;border-bottom:1px solid #e5e5eb;display:flex;align-items:center;gap:7px;padding:0 16px}.chrome i{width:9px;height:9px;border-radius:50%;background:#d2d5df}.url{height:22px;flex:1;margin-left:8px;border-radius:7px;background:#eef0f5}.canvas{background:#f4f5fa;padding:22px}.canvas-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.canvas-head b{width:42%;height:14px;background:#202431;border-radius:6px}.avatar{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--violet),var(--cyan))}.studio-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:13px}.studio-card{background:white;border:1px solid #e4e6ed;border-radius:16px;padding:15px}.line{height:7px;background:#e8eaf0;border-radius:4px;margin:7px 0}.line.sm{width:58%}.line.md{width:82%}.chart{height:118px;margin-top:13px;border-radius:12px;background:linear-gradient(180deg,rgba(101,88,232,.11),rgba(101,88,232,.02));position:relative;overflow:hidden}.chart svg{position:absolute;inset:16px 12px 10px 12px}
+    .note{position:absolute;left:-26px;bottom:22px;width:230px;background:var(--ink);color:#fff;border-radius:20px;padding:18px;box-shadow:0 20px 50px rgba(17,19,24,.24);transform:rotate(-2deg)}.note strong{display:block;color:#a8eef6;font-size:11px;text-transform:uppercase;letter-spacing:.11em;margin-bottom:8px}.note p{color:#dde0e9;font-size:14px;margin:0}
+    .trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0}.trust-row{display:flex;align-items:center;gap:20px;flex-wrap:wrap}.trust-row>span{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:#8a8f99;font-weight:850;margin-right:8px}.trust b{font-size:14px;color:#4b505d;font-weight:800}
+    section{padding:82px 0}.section-head{max-width:790px;margin-bottom:36px}.kicker{font-size:12px;text-transform:uppercase;letter-spacing:.14em;font-weight:900;color:var(--violet)}
+    .domains{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.domain{padding:25px;border-radius:22px;border:1px solid var(--line);background:rgba(255,255,255,.72)}.domain .num{font-size:12px;font-weight:900;color:var(--violet);margin-bottom:30px}.domain p{font-size:15px}.domain ul{margin:12px 0 0;padding-left:18px;color:var(--muted);font-size:14px}
+    .feature{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:0 14px 50px rgba(30,34,60,.05);margin-bottom:28px}.feature-head{display:grid;grid-template-columns:1fr 1fr;min-height:390px}.feature-copy{padding:40px}.case-label{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.12em;color:var(--violet);margin-bottom:11px}.tags{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}.tag{font-size:12px;font-weight:750;padding:6px 9px;border-radius:999px;background:#f0f1f5;color:#555b67}.evidence{font-size:12px;color:#7d838f;margin-top:16px}.visual{display:flex;align-items:center;justify-content:center;padding:30px;background:linear-gradient(135deg,#171a28,#34326c);position:relative;overflow:hidden}.visual.light{background:linear-gradient(135deg,#eef5f6,#e9e7ff)}.visual.warm{background:linear-gradient(135deg,#f4efe4,#e8edf6)}
+    .artifact-band{display:grid;grid-template-columns:1.05fr .95fr;border-top:1px solid var(--line)}.artifact-text{padding:34px 38px}.artifact-visual{padding:26px;background:#f7f8fb;border-left:1px solid var(--line);min-height:285px;display:flex;align-items:center;justify-content:center}.artifact-text ul{margin:10px 0 0;padding-left:18px;color:var(--muted)}.artifact-text li{margin:7px 0}
+    .research-board{width:min(100%,460px);background:#fff;border-radius:20px;box-shadow:0 22px 55px rgba(0,0,0,.19);padding:18px;transform:rotate(-1deg)}.rb-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}.rb-title{width:36%;height:10px;border-radius:5px;background:#242735}.rb-chip{width:68px;height:22px;border-radius:999px;background:#e8e7fb}.rb-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.rb-card{border:1px solid #e5e6ec;border-radius:12px;padding:12px}.rb-card .q{height:7px;border-radius:4px;background:#cfd2dd;margin:6px 0}.rb-bars{display:flex;align-items:end;gap:5px;height:72px;padding-top:8px}.rb-bars i{flex:1;border-radius:5px 5px 2px 2px;background:linear-gradient(180deg,var(--violet),#948bf3)}.rb-bars i:nth-child(1){height:35%}.rb-bars i:nth-child(2){height:63%}.rb-bars i:nth-child(3){height:82%}.rb-bars i:nth-child(4){height:53%}.rb-bars i:nth-child(5){height:72%}
+    .flowboard{width:min(100%,470px);background:#fff;border-radius:20px;padding:20px;box-shadow:0 20px 50px rgba(0,0,0,.16)}.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;align-items:center}.node{border:1px solid #dfe2e9;background:#f8f9fb;border-radius:13px;padding:11px;height:86px;position:relative}.node b{display:inline-flex;width:23px;height:23px;border-radius:50%;align-items:center;justify-content:center;background:var(--violet);color:#fff;font-size:11px}.node i{display:block;height:5px;background:#d4d7e0;border-radius:4px;margin-top:8px}.node:after{content:"→";position:absolute;right:-11px;top:30px;color:#9ba0ab;font-weight:900}.node:last-child:after{display:none}
+    .phone{width:194px;height:365px;border:8px solid #0d101b;border-radius:32px;background:#fff;padding:16px;box-shadow:0 25px 55px rgba(0,0,0,.24);position:relative}.phone:before{content:"";position:absolute;width:60px;height:10px;top:7px;left:50%;transform:translateX(-50%);background:#0d101b;border-radius:10px}.p-head{height:18px;width:65%;background:#202533;border-radius:7px;margin:18px 0 12px}.p-sub{height:7px;width:86%;background:#e1e3e8;border-radius:4px}.p-card{margin-top:14px;border-radius:14px;background:#f0f2f7;padding:13px}.p-card.accent{background:linear-gradient(135deg,#e9e6ff,#e6f6f7)}.p-line{height:6px;background:#cdd1db;border-radius:4px;margin:6px 0}.p-btn{height:34px;border-radius:10px;background:var(--violet);margin-top:16px}.p-nav{display:flex;gap:6px;margin-top:15px}.p-nav i{height:7px;flex:1;border-radius:5px;background:#e0e2e9}.p-nav i:first-child{background:var(--violet)}
+    .journey-map{width:min(100%,490px);background:#fff;border-radius:20px;padding:20px;box-shadow:0 22px 48px rgba(57,57,90,.13)}.jm-head{display:grid;grid-template-columns:110px repeat(4,1fr);gap:7px;margin-bottom:7px}.jm-head span{font-size:9px;color:#777d89;font-weight:800;text-align:center}.jm-row{display:grid;grid-template-columns:110px repeat(4,1fr);gap:7px;margin:7px 0}.jm-row>span{font-size:10px;color:#6e7480;font-weight:800;align-self:center}.cell{height:52px;border:1px solid #e0e2e8;border-radius:10px;background:#f7f8fa;position:relative}.cell.good{background:#eef7ee}.cell.friction{background:#fff3e9}.cell:before,.cell:after{content:"";position:absolute;left:9px;right:9px;height:5px;border-radius:4px;background:#cfd3dc}.cell:before{top:12px}.cell:after{top:24px;right:35%}
+    .blueprint{width:min(100%,500px);background:#fff;border-radius:20px;padding:18px;box-shadow:0 20px 46px rgba(50,55,75,.13)}.bp-header{display:grid;grid-template-columns:110px repeat(4,1fr);gap:6px;margin-bottom:7px}.bp-header b{font-size:9px;text-align:center;color:#757b86}.bp-row{display:grid;grid-template-columns:110px repeat(4,1fr);gap:6px;margin:6px 0}.bp-row>span{font-size:10px;font-weight:800;color:#686e79;align-self:center}.bp-cell{height:45px;border:1px solid #e0e2e8;border-radius:9px;background:#f6f7f9}.bp-cell.user{background:#eef3ff}.bp-cell.org{background:#f1f8ee}.bp-cell.risk{background:#fff4eb}
+    .decisions{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:0 38px 38px}.decision{border:1px solid var(--line);background:#fbfbfc;border-radius:17px;padding:18px}.decision b{display:block;margin-bottom:7px}.decision p{font-size:14px;margin:0}
+    .outcome-note{margin:0 38px 38px;padding:16px 18px;border-radius:15px;background:#f3f1ff;border:1px solid #ded9ff;color:#515567;font-size:14px}.outcome-note strong{color:var(--ink)}
+    .process{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.process-step{padding:22px 18px;border:1px solid var(--line);border-radius:18px;background:#fff}.process-step b{display:inline-flex;width:32px;height:32px;border-radius:10px;align-items:center;justify-content:center;background:var(--ink);color:white;margin-bottom:16px}.process-step p{font-size:14px;margin:0}
+    .stack{display:grid;grid-template-columns:1fr 1fr;gap:18px}.stack-card{padding:26px;border:1px solid var(--line);border-radius:22px;background:#fff}.tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+    .experience{border-top:1px solid var(--line)}.role{display:grid;grid-template-columns:190px 1fr;gap:25px;padding:23px 0;border-bottom:1px solid var(--line)}.role time{font-size:13px;font-weight:850;color:#777c87}.role p{margin:0;font-size:15px}.role small{display:block;color:#898e98;margin-top:5px}
+    .ai-card{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center;padding:36px;border-radius:28px;background:var(--ink);color:#fff}.ai-card h2{margin-top:0}.ai-card p{color:#d9dce6}.ai-points{display:grid;grid-template-columns:1fr 1fr;gap:10px}.ai-point{padding:16px;border-radius:15px;background:#1e222c;border:1px solid #303543}.ai-point b{font-size:13px}.ai-point p{font-size:12px;margin:4px 0 0;color:#bfc4cf}
+    .contact{padding:54px;border-radius:30px;background:linear-gradient(135deg,#6759e9,#3f36b9);color:#fff;display:flex;align-items:center;justify-content:space-between;gap:25px}.contact h2{max-width:720px;margin:0}.contact p{color:#e7e5ff;margin:10px 0 0}.contact .btn{border-color:#fff}
+    footer{padding:28px 0 40px}.footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:#7a7f89;font-size:13px}
+    @media(max-width:930px){.hero-grid,.feature-head,.artifact-band,.ai-card{grid-template-columns:1fr}.hero-art{min-height:auto}.note{left:10px}.domains{grid-template-columns:1fr}.artifact-visual{border-left:0;border-top:1px solid var(--line)}.decisions{grid-template-columns:1fr}.process{grid-template-columns:repeat(2,1fr)}.stack{grid-template-columns:1fr}.role{grid-template-columns:1fr}.contact{flex-direction:column;align-items:flex-start}.ai-points{grid-template-columns:1fr}}
+    @media(max-width:700px){.navlinks a:not(.nav-cv){display:none}.hero{padding-top:60px}.feature-copy,.artifact-text{padding:28px}.artifact-visual{padding:18px}.decisions{padding:0 28px 28px}.outcome-note{margin:0 28px 28px}.process{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}.node:nth-child(2):after{display:none}.journey-map,.blueprint{overflow-x:auto}.jm-head,.jm-row,.bp-header,.bp-row{min-width:460px}.trust-row{gap:12px}.contact{padding:34px}.hero-art{display:none}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn:hover{transform:none}}
   </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Olawale Ajani","jobTitle":"Senior UX/UI Product Designer","email":"mailto:elawjani@gmail.com","url":"https://elawjani.github.io/olawale.ajani/","knowsAbout":["UX/UI Design","Product Design","UX Research","Nonprofit Programmes","Community Engagement","Government Administration","AI Evaluation"]}
+  </script>
 </head>
 <body>
-  <nav>
-    <div class="nav-inner">
-      <a class="brand" href="#top">Olawale Ajani</a>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#case-studies">Case Studies</a>
-        <a href="#judgment">Product Judgment</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </nav>
+<a class="skip" href="#main">Skip to content</a>
+<nav><div class="wrap nav"><a class="brand" href="#top">Olawale <em>Ajani</em></a><div class="navlinks"><a href="#work">Work</a><a href="#expertise">Expertise</a><a href="#experience">Experience</a><a href="#contact">Contact</a><a class="nav-cv" href="assets/Olawale_Ajani_CV.pdf" target="_blank" rel="noopener">Download CV</a></div></div></nav>
+<main id="main">
+  <header class="hero" id="top"><div class="wrap hero-grid"><div><div class="eyebrow"><i></i>Senior UX/UI Product Designer</div><h1>I design clearer experiences for complex products and services.</h1><p class="lead">Senior UX/UI product designer with experience across agency, banking, technology, public service and nonprofit environments. I turn user evidence, business requirements and operational complexity into usable digital experiences.</p><div class="hero-actions"><a class="btn primary" href="#work">View selected work →</a><a class="btn" href="assets/Olawale_Ajani_CV.pdf" target="_blank" rel="noopener">Download CV</a><a class="btn" href="mailto:elawjani@gmail.com">Email me</a></div><div class="pill-row"><span class="pill">UX research</span><span class="pill">Data analysis</span><span class="pill">User journeys</span><span class="pill">Wireframing</span><span class="pill">Prototyping</span><span class="pill">Usability</span><span class="pill">Accessibility</span></div></div>
+  <div class="hero-art" aria-hidden="true"><div class="studio"><div class="chrome"><i></i><i></i><i></i><div class="url"></div></div><div class="canvas"><div class="canvas-head"><b></b><div class="avatar"></div></div><div class="studio-grid"><div class="studio-card"><div class="line sm"></div><div class="line md"></div><div class="chart"><svg viewBox="0 0 300 100" fill="none"><path d="M0 78 C45 64 72 82 108 55 S175 38 212 48 S260 10 300 19" stroke="#6558e8" stroke-width="5" stroke-linecap="round"/><circle cx="108" cy="55" r="5" fill="#19a7bd"/><circle cx="212" cy="48" r="5" fill="#19a7bd"/></svg></div></div><div><div class="studio-card"><div class="line sm"></div><div class="line"></div><div class="line md"></div></div><div class="studio-card" style="margin-top:13px"><div class="line sm"></div><div class="line"></div><div class="line md"></div></div></div></div></div></div><div class="note"><strong>Design principle</strong><p>Make the problem explicit before making the interface beautiful.</p></div></div></div></header>
 
-  <header class="hero" id="top">
-    <div class="hero-grid">
-      <div>
-        <div class="eyebrow">Product Design • UX Evaluation • AI Assessment</div>
-        <h1>Research-driven product judgment for better user experiences.</h1>
-        <p class="lead">I evaluate digital experiences, AI outputs, user journeys, and service workflows to identify friction, improve clarity, and support better product decisions.</p>
-        <div class="actions">
-          <a class="btn primary" href="#case-studies">View Case Studies</a>
-          <a class="btn" href="#contact">Contact Me</a>
-        </div>
-      </div>
-      <aside class="hero-card">
-        <div class="metric"><strong>UX Evaluation</strong><span>Usability review, journey feedback, and product critique</span></div>
-        <div class="metric"><strong>AI Assessment</strong><span>Response quality, usefulness, reasoning, and safety review</span></div>
-        <div class="metric"><strong>Service Design</strong><span>Complex user journeys across public-sector and support services</span></div>
-      </aside>
-    </div>
-  </header>
+  <div class="trust"><div class="wrap trust-row"><span>Experience across</span><b>Orizon Design</b><b>Union Bank</b><b>Amazon UK</b><b>NAPTIP</b><b>Migrant Help</b></div></div>
 
-  <section id="about">
-    <div class="section-head">
-      <div class="eyebrow">About</div>
-      <h2>Product Design & UX Evaluation Specialist</h2>
-      <p>I bring a multidisciplinary background in business operations, research, AI evaluation, financial services, public administration, and humanitarian service delivery. My strength is not only visual design, but understanding user needs, assessing product experiences, and turning complex information into practical recommendations.</p>
-    </div>
-    <div class="grid three">
-      <div class="card"><h3>User-Centred Analysis</h3><p>I review how users move through products, services, and information flows, then identify points of confusion, delay, or cognitive load.</p></div>
-      <div class="card"><h3>AI Product Evaluation</h3><p>I assess AI-generated outputs for accuracy, clarity, usefulness, reasoning quality, and alignment with user intent.</p></div>
-      <div class="card"><h3>Research Synthesis</h3><p>I convert interviews, feedback, operational data, and stakeholder input into structured findings and recommendations.</p></div>
-    </div>
-  </section>
+  <section id="expertise"><div class="wrap"><div class="section-head"><div class="kicker">Three-domain perspective</div><h2>Design craft with unusually deep domain context.</h2><p>My portfolio leads with UX/UI and product design. Government/public administration and nonprofit/community work give me additional context for designing and evaluating complex services.</p></div><div class="domains">
+    <article class="domain"><div class="num">01</div><h3>UX/UI & Product Design</h3><p>Research, analysis and interface design across digital products and service journeys.</p><ul><li>User research & synthesis</li><li>User journeys & information architecture</li><li>Wireframes, prototypes & UI</li><li>Usability & accessibility evaluation</li></ul></article>
+    <article class="domain"><div class="num">02</div><h3>Nonprofit & Community Engagement</h3><p>Experience with programmes where accessibility, safeguarding, funding and outcomes shape the user experience.</p><ul><li>Needs assessment</li><li>Programme evaluation</li><li>Community engagement</li><li>Monitoring & outcomes</li></ul></article>
+    <article class="domain"><div class="num">03</div><h3>Government & Public Administration</h3><p>First-hand experience of policy implementation, multi-agency operations and public-service delivery.</p><ul><li>Public programme delivery</li><li>Policy & operational research</li><li>Evidence analysis</li><li>Government–nonprofit partnerships</li></ul></article>
+  </div></div></section>
 
-  <section id="case-studies">
-    <div class="section-head">
-      <div class="eyebrow">Selected Work</div>
-      <h2>Case Studies</h2>
-      <p>These examples show how I apply UX thinking, service analysis, product critique, and research-driven judgment across AI, banking, public-sector, and support-service contexts.</p>
-    </div>
+  <section id="work"><div class="wrap"><div class="section-head"><div class="kicker">Selected work</div><h2>Evidence of how I think, not just what tools I use.</h2><p>Some client work is confidential. Where screenshots cannot be shown, I use clearly labelled representative reconstructions to demonstrate the research, flows, design decisions and evaluation methods used in my work.</p></div>
 
-    <article class="card case highlight">
-      <div class="case-top"><div><span class="case-num">Case Study 01</span><h3>AI Product Evaluation & User Experience Assessment</h3></div></div>
-      <p><strong>Challenge:</strong> AI products must deliver responses that are accurate, helpful, clear, safe, and aligned with user expectations.</p>
-      <div class="grid two">
-        <div><h3>Approach</h3><ul><li>Reviewed AI-generated responses against user intent.</li><li>Evaluated clarity, usefulness, reasoning, and completeness.</li><li>Identified usability gaps where responses were vague, overcomplicated, or not actionable.</li><li>Provided structured feedback to improve the product experience.</li></ul></div>
-        <div><h3>Outcome</h3><ul><li>Created consistent assessment logic for product-quality decisions.</li><li>Improved feedback quality through clear evaluation criteria.</li><li>Demonstrated judgment across business, research, compliance, and customer-experience scenarios.</li></ul></div>
-      </div>
-      <div class="framework"><div class="frame">Accuracy</div><div class="frame">Relevance</div><div class="frame">Clarity</div><div class="frame">Helpfulness</div><div class="frame">Safety</div></div>
-      <div class="tag-row"><span class="tag">AI Evaluation</span><span class="tag">UX Assessment</span><span class="tag">Product Judgment</span><span class="tag">Response Quality</span></div>
+    <article class="feature">
+      <div class="feature-head"><div class="feature-copy"><div class="case-label">Case study 01 · Product design agency</div><h3>From ambiguous requirements to a testable product flow</h3><p><strong>Context:</strong> A representative, NDA-safe reconstruction of the workflow I use at Orizon Design when teams need to move from business goals and user needs to a coherent interface.</p><div class="tags"><span class="tag">UX research</span><span class="tag">Data analysis</span><span class="tag">User flows</span><span class="tag">Wireframing</span><span class="tag">Prototyping</span><span class="tag">Usability</span></div><p class="evidence"><strong>Evidence status:</strong> process and responsibilities are real; visuals are reconstructed to protect client confidentiality.</p></div><div class="visual"><div class="research-board"><div class="rb-top"><div class="rb-title"></div><div class="rb-chip"></div></div><div class="rb-grid"><div class="rb-card"><div class="q"></div><div class="q"></div><div class="q" style="width:62%"></div></div><div class="rb-card"><div class="q"></div><div class="q" style="width:75%"></div><div class="q" style="width:55%"></div></div><div class="rb-card" style="grid-column:1/3"><div class="rb-bars"><i></i><i></i><i></i><i></i><i></i></div></div></div></div></div></div>
+      <div class="artifact-band"><div class="artifact-text"><h4>1 · Research synthesis</h4><h3>Turn scattered evidence into a design problem.</h3><p>I start by clarifying the user goal, business objective, constraints and success criteria, then synthesise qualitative and quantitative signals into themes.</p><ul><li>Separate observed behaviour from stakeholder assumptions.</li><li>Group recurring pain points and prioritise by user impact and business relevance.</li><li>Write the problem statement before committing to a UI pattern.</li></ul></div><div class="artifact-visual"><div class="research-board"><div class="rb-top"><div class="rb-title"></div><div class="rb-chip"></div></div><div class="rb-grid"><div class="rb-card"><div class="q"></div><div class="q"></div><div class="q" style="width:72%"></div></div><div class="rb-card"><div class="q"></div><div class="q" style="width:68%"></div><div class="q" style="width:48%"></div></div><div class="rb-card" style="grid-column:1/3"><div class="rb-bars"><i></i><i></i><i></i><i></i><i></i></div></div></div></div></div></div>
+      <div class="artifact-band"><div class="artifact-text"><h4>2 · Flow design</h4><h3>Make the journey understandable before making it polished.</h3><p>Once the problem is framed, I map the primary journey and critical states. This helps expose unnecessary steps, missing information and edge cases early.</p><ul><li>Map the happy path and high-risk exceptions.</li><li>Reduce decisions per screen and keep system feedback visible.</li><li>Align the information sequence with the user's mental model.</li></ul></div><div class="artifact-visual"><div class="flowboard"><div class="flow"><div class="node"><b>1</b><i></i><i style="width:68%"></i></div><div class="node"><b>2</b><i></i><i style="width:55%"></i></div><div class="node"><b>3</b><i></i><i style="width:78%"></i></div><div class="node"><b>4</b><i></i><i style="width:48%"></i></div></div></div></div></div>
+      <div class="artifact-band"><div class="artifact-text"><h4>3 · Interface concept</h4><h3>Use hierarchy and progressive disclosure to lower cognitive load.</h3><p>The polished concept translates the flow into a clear interface with predictable structure, strong hierarchy and accessible interaction patterns.</p><ul><li>Prioritise one dominant action per state.</li><li>Use plain language and visible progress.</li><li>Keep validation close to the point of action.</li></ul></div><div class="artifact-visual"><div class="phone"><div class="p-head"></div><div class="p-sub"></div><div class="p-card accent"><div class="p-line"></div><div class="p-line" style="width:68%"></div></div><div class="p-card"><div class="p-line"></div><div class="p-line" style="width:58%"></div></div><div class="p-card"><div class="p-line"></div><div class="p-line" style="width:72%"></div></div><div class="p-btn"></div><div class="p-nav"><i></i><i></i><i></i></div></div></div></div>
+      <div class="decisions"><div class="decision"><b>Research before polish</b><p>Visual detail comes after the team agrees on the problem, user need and flow.</p></div><div class="decision"><b>Accessibility by default</b><p>Hierarchy, language, states and contrast are considered as design inputs, not final QA.</p></div><div class="decision"><b>Evaluate, then iterate</b><p>Usability findings and stakeholder feedback are treated as evidence for the next design decision.</p></div></div>
+      <div class="outcome-note"><strong>Outcome statement:</strong> because client metrics are confidential, I do not claim numerical impact here. The case study demonstrates the end-to-end design process I use to reach validated product decisions.</div>
     </article>
 
-    <article class="card case">
-      <div class="case-top"><div><span class="case-num">Case Study 02</span><h3>Banking Customer Journey Review</h3></div></div>
-      <p><strong>Challenge:</strong> Customers often need support understanding financial products, onboarding steps, and service options.</p>
-      <div class="grid two">
-        <div><h3>Research Activities</h3><ul><li>Analysed customer needs and pain points.</li><li>Reviewed product explanation and onboarding friction.</li><li>Observed where customers required additional guidance.</li><li>Mapped service interactions from enquiry to recommendation.</li></ul></div>
-        <div><h3>Recommendations</h3><ul><li>Simplify product explanations using plain language.</li><li>Create clearer onboarding steps and decision support.</li><li>Improve responsiveness and issue-resolution pathways.</li><li>Personalise recommendations around customer goals.</li></ul></div>
-      </div>
-      <div class="tag-row"><span class="tag">Customer Experience</span><span class="tag">Journey Mapping</span><span class="tag">Financial Services</span><span class="tag">User Needs</span></div>
+    <article class="feature">
+      <div class="feature-head"><div class="visual light"><div class="journey-map"><div class="jm-head"><span></span><span>Discover</span><span>Compare</span><span>Decide</span><span>Complete</span></div><div class="jm-row"><span>User action</span><div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell good"></div></div><div class="jm-row"><span>Friction</span><div class="cell"></div><div class="cell friction"></div><div class="cell friction"></div><div class="cell"></div></div><div class="jm-row"><span>Opportunity</span><div class="cell good"></div><div class="cell good"></div><div class="cell good"></div><div class="cell good"></div></div></div></div><div class="feature-copy"><div class="case-label">Case study 02 · Financial services</div><h3>Using customer insight to improve banking journeys</h3><p><strong>Context:</strong> At Union Bank, customer conversations and service data gave me direct insight into where retail and commercial banking journeys were confusing, repetitive or difficult to understand.</p><div class="tags"><span class="tag">Customer research</span><span class="tag">Journey mapping</span><span class="tag">Service data</span><span class="tag">UX improvement</span><span class="tag">Compliance-aware design</span></div><p class="evidence"><strong>Evidence status:</strong> experience is based on my banking role; the journey visual is a representative reconstruction rather than a bank-owned artifact.</p></div></div>
+      <div class="artifact-band"><div class="artifact-text"><h4>Signal</h4><h3>Support questions are product data.</h3><p>Repeated questions, hesitation points and requests for help often reveal where a financial product or service is not self-explanatory.</p><ul><li>Capture recurring questions and moments of uncertainty.</li><li>Compare qualitative feedback with service/performance information.</li><li>Separate policy constraints from avoidable UX friction.</li></ul></div><div class="artifact-visual"><div class="journey-map"><div class="jm-head"><span></span><span>Entry</span><span>Understand</span><span>Choose</span><span>Act</span></div><div class="jm-row"><span>Confidence</span><div class="cell good"></div><div class="cell friction"></div><div class="cell friction"></div><div class="cell good"></div></div><div class="jm-row"><span>Information</span><div class="cell"></div><div class="cell"></div><div class="cell friction"></div><div class="cell"></div></div><div class="jm-row"><span>UX response</span><div class="cell good"></div><div class="cell good"></div><div class="cell good"></div><div class="cell good"></div></div></div></div></div>
+      <div class="decisions"><div class="decision"><b>Design for trust</b><p>Clarity, plain language and visible decision support matter as much as visual polish in financial services.</p></div><div class="decision"><b>Keep compliance visible</b><p>Good UX works with regulatory requirements rather than hiding or compressing important information.</p></div><div class="decision"><b>Use frontline insight</b><p>Customer-facing experience can reveal patterns that analytics alone do not explain.</p></div></div>
     </article>
 
-    <article class="card case">
-      <div class="case-top"><div><span class="case-num">Case Study 03</span><h3>Service Design for Vulnerable Users</h3></div></div>
-      <p><strong>Challenge:</strong> Users navigating complex support services often deal with multiple agencies, documentation demands, safeguarding needs, and stressful circumstances.</p>
-      <div class="grid two">
-        <div><h3>Approach</h3><ul><li>Conducted needs assessments and risk reviews.</li><li>Analysed service touchpoints and stakeholder handoffs.</li><li>Prepared structured reports and case documentation.</li><li>Identified opportunities to reduce confusion and improve service accessibility.</li></ul></div>
-        <div><h3>UX Principles Applied</h3><ul><li>Clarity: make next steps easier to understand.</li><li>Trust: provide consistent communication.</li><li>Accessibility: reduce administrative burden.</li><li>Coordination: improve handoffs between stakeholders.</li></ul></div>
-      </div>
-      <div class="tag-row"><span class="tag">Service Design</span><span class="tag">User Journey</span><span class="tag">Public Sector</span><span class="tag">Stakeholder Coordination</span></div>
+    <article class="feature">
+      <div class="feature-head"><div class="feature-copy"><div class="case-label">Domain case study 03 · Public service & community</div><h3>Designing for complex, high-stakes service journeys</h3><p><strong>Context:</strong> My government and nonprofit work involves people navigating multiple agencies, eligibility rules, documentation, safeguarding requirements and handoffs. This is a service-design lens drawn from those environments.</p><div class="tags"><span class="tag">Service design</span><span class="tag">Needs assessment</span><span class="tag">Information architecture</span><span class="tag">Accessibility</span><span class="tag">Stakeholder mapping</span></div><p class="evidence"><strong>Evidence status:</strong> this is a domain-practice reconstruction, not a claim that a specific government or nonprofit interface was shipped.</p></div><div class="visual warm"><div class="blueprint"><div class="bp-header"><b></b><b>Need</b><b>Assess</b><b>Refer</b><b>Follow-up</b></div><div class="bp-row"><span>User</span><div class="bp-cell user"></div><div class="bp-cell user"></div><div class="bp-cell user"></div><div class="bp-cell user"></div></div><div class="bp-row"><span>Frontstage</span><div class="bp-cell org"></div><div class="bp-cell org"></div><div class="bp-cell org"></div><div class="bp-cell org"></div></div><div class="bp-row"><span>Risk / policy</span><div class="bp-cell risk"></div><div class="bp-cell risk"></div><div class="bp-cell risk"></div><div class="bp-cell risk"></div></div></div></div></div>
+      <div class="artifact-band"><div class="artifact-text"><h4>Service blueprint</h4><h3>Treat organisational handoffs as part of the user's experience.</h3><p>In complex services, the experience is shaped not only by screens but also by agencies, policies, evidence requirements and handoffs. Mapping them together helps identify where users carry unnecessary administrative burden.</p><ul><li>Map the user's goal alongside organisational responsibilities.</li><li>Surface documentation and eligibility requirements at the right time.</li><li>Design for stress, limited context and accessibility needs.</li><li>Make ownership and next steps explicit across handoffs.</li></ul></div><div class="artifact-visual"><div class="blueprint"><div class="bp-header"><b></b><b>Start</b><b>Assess</b><b>Coordinate</b><b>Resolve</b></div><div class="bp-row"><span>User goal</span><div class="bp-cell user"></div><div class="bp-cell user"></div><div class="bp-cell user"></div><div class="bp-cell user"></div></div><div class="bp-row"><span>Organisation</span><div class="bp-cell org"></div><div class="bp-cell org"></div><div class="bp-cell org"></div><div class="bp-cell org"></div></div><div class="bp-row"><span>Policy / risk</span><div class="bp-cell risk"></div><div class="bp-cell risk"></div><div class="bp-cell risk"></div><div class="bp-cell risk"></div></div></div></div></div>
+      <div class="outcome-note"><strong>Design takeaway:</strong> when the service is high-stakes, reducing cognitive load and ambiguity is a user-safety issue as well as a usability issue.</div>
     </article>
-  </section>
+  </div></section>
 
-  <section id="judgment">
-    <div class="section-head">
-      <div class="eyebrow">Product Judgment</div>
-      <h2>How I Evaluate Product Quality</h2>
-      <p>For product design and AI evaluation tasks, I use structured judgment: identify the user goal, compare options, assess friction, and recommend the experience that best supports the user.</p>
-    </div>
-    <div class="grid two">
-      <div class="card judgment"><h3>Example: Onboarding Flow</h3><p><strong>Question:</strong> Which onboarding flow creates less friction?</p><ul><li>Option A requires many fields before the user sees value.</li><li>Option B asks only for essential information first.</li><li>Recommendation: Option B, because it reduces cognitive load and helps users reach the core experience faster.</li></ul></div>
-      <div class="card judgment"><h3>Example: AI Response Quality</h3><p><strong>Question:</strong> Which response better serves the user?</p><ul><li>Response A is technically correct but vague.</li><li>Response B is accurate, structured, and actionable.</li><li>Recommendation: Response B, because it better matches user intent and reduces the need for follow-up clarification.</li></ul></div>
-    </div>
-  </section>
+  <section id="approach"><div class="wrap"><div class="section-head"><div class="kicker">Approach</div><h2>A repeatable process for difficult problems.</h2><p>I use research and evidence to narrow ambiguity before committing to visual solutions.</p></div><div class="process"><div class="process-step"><b>1</b><h3>Discover</h3><p>Users, goals, constraints, evidence and context.</p></div><div class="process-step"><b>2</b><h3>Frame</h3><p>Problem statement, priorities and success criteria.</p></div><div class="process-step"><b>3</b><h3>Map</h3><p>Journeys, flows, information architecture and edge cases.</p></div><div class="process-step"><b>4</b><h3>Prototype</h3><p>Wireframes and interactive concepts that make decisions testable.</p></div><div class="process-step"><b>5</b><h3>Evaluate</h3><p>Usability, accessibility, evidence and structured feedback.</p></div></div></div></section>
 
-  <section id="skills">
-    <div class="section-head">
-      <div class="eyebrow">Skills & Methods</div>
-      <h2>Tools, Methods, and Strengths</h2>
-    </div>
-    <div class="card">
-      <div class="tag-row">
-        <span class="tag">UX Research</span><span class="tag">User Journey Mapping</span><span class="tag">Usability Assessment</span><span class="tag">Product Evaluation</span><span class="tag">AI Evaluation</span><span class="tag">Service Design</span><span class="tag">Customer Experience</span><span class="tag">Research Synthesis</span><span class="tag">Business Analysis</span><span class="tag">Stakeholder Management</span><span class="tag">Process Improvement</span><span class="tag">Report Writing</span><span class="tag">Microsoft Excel</span><span class="tag">PowerPoint</span><span class="tag">Word</span><span class="tag">Google Workspace</span>
-      </div>
-    </div>
-  </section>
+  <section id="skills"><div class="wrap"><div class="section-head"><div class="kicker">Toolkit</div><h2>Design craft backed by research and evaluation.</h2></div><div class="stack"><div class="stack-card"><h3>Design & collaboration</h3><p>Tools I use to explore, communicate and refine product ideas.</p><div class="tag-row"><span class="tag">Figma</span><span class="tag">Adobe XD</span><span class="tag">Sketch</span><span class="tag">FigJam</span><span class="tag">Miro</span><span class="tag">Canva</span></div></div><div class="stack-card"><h3>Research & product judgement</h3><p>Methods I use to connect user evidence to product decisions.</p><div class="tag-row"><span class="tag">UX research</span><span class="tag">Qualitative analysis</span><span class="tag">Quantitative analysis</span><span class="tag">Journey mapping</span><span class="tag">Usability evaluation</span><span class="tag">Accessibility</span><span class="tag">Rubric assessment</span><span class="tag">Structured feedback</span></div></div></div></div></section>
 
-  <section id="contact">
-    <div class="section-head">
-      <div class="eyebrow">Contact</div>
-      <h2>Let's connect</h2>
-      <p>I am available for UX evaluation, AI product assessment, product research, user journey feedback, service design analysis, and research-focused product judgment projects.</p>
-      <div class="contact-box">
-        <a class="btn primary" href="mailto:elawjani@gmail.com">elawjani@gmail.com</a>
-        <a class="btn" href="https://github.com/Elawjani/olawale.ajani" target="_blank" rel="noreferrer">GitHub Repository</a>
-      </div>
-    </div>
-  </section>
+  <section id="experience"><div class="wrap"><div class="section-head"><div class="kicker">Experience</div><h2>Where the perspective comes from.</h2><p>My design practice is strengthened by years of working with customers, public services, community programmes and evidence-heavy decision making.</p></div><div class="experience">
+    <div class="role"><time>Jun 2023 — Present</time><div><h3>Senior UX/UI Product Designer · Orizon Design</h3><p>Part-time, remote product-design agency work covering research, data analysis, flows, wireframes, prototypes, interface design and usability.</p></div></div>
+    <div class="role"><time>Mar 2023 — Present</time><div><h3>Client Adviser · Migrant Help</h3><p>Nonprofit delivery of a Home Office-commissioned public service, including needs assessment, safeguarding, programme documentation, outcomes and multi-agency coordination.</p></div></div>
+    <div class="role"><time>Jun 2019 — Jul 2024</time><div><h3>Intelligence Officer / Acting Squad Head · NAPTIP</h3><p>Federal civil-service role combining evidence analysis, policy implementation, public programmes, multi-agency operations and contribution to organisational/public-facing product design.</p><small>Full-time duties: Jun 2019–Mar 2023 · Study leave: Apr 2023–Jul 2024</small></div></div>
+    <div class="role"><time>Dec 2016 — Jun 2019</time><div><h3>UI/UX Product Designer · Union Bank PLC</h3><p>Customer research, user-needs analysis, journey improvement and product/service design in retail and commercial banking.</p></div></div>
+    <div class="role"><time>Aug 2015 — Nov 2016</time><div><h3>Junior Product Designer · Amazon UK</h3><p>User-centred product design, product research, usability analysis and iterative improvement in a technology/e-commerce environment.</p></div></div>
+    <div class="role"><time>Sep 2012 — Aug 2015</time><div><h3>Project Manager / Coordinator · Merit Empowerment Initiative</h3><p>Community programme planning, needs assessment, monitoring and evaluation, funding documentation and stakeholder engagement.</p></div></div>
+  </div></div></section>
 
-  <footer>
-    <p>© 2026 Olawale Ajani. Product Design, UX Evaluation, AI Assessment, and Service Design Portfolio.</p>
-  </footer>
+  <section><div class="wrap"><div class="ai-card"><div><div class="kicker" style="color:#a8eef6">AI evaluation</div><h2>Domain expertise + structured evaluation.</h2><p>I also contribute to AI evaluation work, applying detailed guidelines, rubric assessment, analytical judgement and structured feedback. The value comes from combining evaluation discipline with real domain experience in design, nonprofit/community programmes and public administration.</p><div class="tags"><span class="tag">Outlier · Project Aether</span><span class="tag">Mercor · Generalist Expert</span><span class="tag">Mercor · Project Thor</span><span class="tag">Mercor · Graphic & UX/UI Designer Talent Network</span></div></div><div class="ai-points"><div class="ai-point"><b>Evaluate</b><p>Accuracy, clarity, instruction adherence and professional quality.</p></div><div class="ai-point"><b>Compare</b><p>Identify subtle strengths, weaknesses and trade-offs between outputs.</p></div><div class="ai-point"><b>Explain</b><p>Write concise, evidence-based rationale rather than unsupported preference.</p></div><div class="ai-point"><b>Improve</b><p>Turn critique into actionable feedback that supports better model behaviour.</p></div></div></div></div></section>
+
+  <section id="contact"><div class="wrap"><div class="contact"><div><div class="kicker" style="color:#d9f7fb">Contact</div><h2>Looking for a designer who can work comfortably with complex domains?</h2><p>Available for UX/UI, product-design and domain-expert AI evaluation opportunities.</p></div><div style="display:flex;flex-wrap:wrap;gap:10px"><a class="btn" href="mailto:elawjani@gmail.com">elawjani@gmail.com</a><a class="btn" href="assets/Olawale_Ajani_CV.pdf" target="_blank" rel="noopener">View CV</a></div></div></div></section>
+</main>
+<footer><div class="wrap footer"><span>© 2026 Olawale Ajani</span><span>UX/UI & Product Design · Nonprofit & Community Engagement · Government & Public Administration</span></div></footer>
 </body>
 </html>
